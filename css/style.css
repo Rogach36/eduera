@@ -231,7 +231,9 @@ body {
 }
 .page__instructors {
 }
-/*-----------------------Top------------------------------*/
+.page__people {
+}
+/*-----------------------Top (бэм-блок) -----------------------------*/
 .top {
 }
 .top__title {
@@ -242,11 +244,24 @@ body {
 .top__text {
 	font-family: 'Inter';
 	font-weight: 400;
-	font-size: 22px;
+	font-size: 22px; ()
 	line-height: 145%;
 	text-align: center;
 	color: #D0D3DB;
 }
+/*-----------------------Title(бэм-блок) -----------------------------*/
+.title {
+	font-weight: 700;
+	font-size: 60px;
+	line-height: 117%;
+	text-align: center;
+	letter-spacing: -0.5px;
+}
+
+.title span {
+	color: #F2C94C;
+}
+
 .courses__buttons {
 	display: flex;
 	flex-wrap: wrap;
@@ -641,17 +656,6 @@ body {
 	left: 108px;
 	background-image: url("../img/category/02.svg");
 	background-repeat: no-repeat;
-}
-.title {
-	font-weight: 700;
-	font-size: 60px;
-	line-height: 117%;
-	text-align: center;
-	letter-spacing: -0.5px;
-}
-
-.title span {
-	color: #F2C94C;
 }
 
 .category__item {
@@ -1089,7 +1093,7 @@ body {
 }
 
 @media (max-width: 1619px) {
-	.body-instructors__title {		
+	.body-instructors__title {
 		line-height: 117%;	
 	}
 }
@@ -1125,5 +1129,183 @@ body {
 @media (max-width: 479px) {
 .instructors__top .top__title {
 	font-size: 55px;
+}
+}
+
+/*----------------------------PEOPLE-----------------------------*/
+
+
+.people {
+	padding: 70px 0 79px;
+}
+.people__container {
+}
+._container {
+}
+.people__title {
+	margin: 0 0 100px 0;
+	position: relative;
+}
+.people__title::before {
+	content: "";
+	background-image: url("/img/people/icon/01.svg");
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 117px;
+	height: 117px;
+	top: -22px;
+	left: 83px;
+}
+.people__title.people__title::after {
+	content: "";
+	background-image: url("/img/people/icon/arrow-down.svg");
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 115px;
+	height:  100px;
+	top: 30px;
+	right:416px;
+	transfor: rotate(45deg);
+}
+.people__body {
+	padding: 83px 84.73px 72px 71px;
+	display: flex;
+	background: #2F2B6D;
+	border: 2px solid rgba(255, 255, 255, 0.2);
+	border-radius: 30px;
+}
+.people__image {
+	flex: 0 0 24.767%;
+	padding: 0 30px 0 0;
+}
+.people__content {
+	flex: 1 1 auto;
+	
+}
+
+.content-people__top {
+	margin: 0 0 69px 0;
+}
+.top-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.top-content__text-title {
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 79%;
+	margin: 0 0 12px 0;
+	padding: 0 30px 0 0;
+}
+
+.top-content__text-subtitle {
+	font-family: 'Inter';
+	font-style: normal;
+	font-size: 14px;
+	line-height: 129%;
+	color: #D9ECFF;
+}
+.content-people__rait {
+}
+.rait {
+	display: flex;
+	align-self: center;
+}
+.rait__icon {
+	background-image: url("../img/people/icon/gold-star.svg");
+	width: 30.54px;
+	height: 30.54px;
+	background-repeat: no-repeat ;
+}
+
+.rait__icon:last-child{
+	background-image: url("../img/people/icon/w-star.svg");
+}
+
+.rait__icon:not(:last-child) {
+	margin: 0 8.96px 0 0;
+}
+
+.content-people__text {
+	font-family: 'Inter';	
+	font-size: 20px;
+	line-height: 160%;
+	color: #B0B0D1;
+	margin: 0 0 85px 0;
+}
+.content-people__bottom {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+.content-people__bottom::after {
+	content: "";
+	position: absolute;
+	width: 63px;
+	height: 63px;
+	top: -13px;
+	right: 50%;
+	background-image: url("/img/people/icon/small-star.svg");
+}
+
+.content-people__arrow {
+}
+.arrow {
+}
+.arrow-left {
+	margin: 0 28px 0 0;
+}
+.arrow-right {
+}
+.content-people__quotes {
+}
+
+@media (min-width: 1200px) {
+	.people__body {
+		/* display: flex; */
+	}
+	.people__content {		
+		padding: 0 0 0 91.2px;
+}
+.people__image {
+	padding: 0 91.8px 0 0;
+}
+}
+
+@media (max-width: 992px)  {
+	.people__body {
+		display: block;
+		padding: 60px;
+	}
+	.people__image {
+		text-align: center;
+		padding-bottom: 50px;
+	}	
+	.content-people__top {
+		margin: 0 0 35px 0;
+  }
+	.top-content__text {
+	margin-bottom: 30px;
+	}
+	.top-content__text-title {
+		font-size: 35px;
+	}
+	.top-content__text-subtitle {
+		font-size: 18px;
+	}
+	.content-people__text {
+		font-size: 22px;
+	}
+}
+
+@media (max-width: 538px)  {
+.people__image img {
+	width: 100%;
+}
+.content-people__text {
+	font-size: 20px;
 }
 }
