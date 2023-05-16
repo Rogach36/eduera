@@ -229,6 +229,11 @@ body {
 .page__courses {
 	margin-bottom: 66px;
 }
+@media(max-width: 479px) {
+	.page__courses {
+		margin-bottom: 0;
+  }
+}
 .page__instructors {
 }
 .page__people {
@@ -258,6 +263,12 @@ body {
 	letter-spacing: -0.5px;
 }
 
+@media(max-width: 479px) {
+	.title {		
+		font-size: 45px;
+  }
+}
+
 .title span {
 	color: #F2C94C;
 }
@@ -267,8 +278,14 @@ body {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	margin-bottom: 97px;
-	
+	margin-bottom: 97px;	
+}
+
+@media(max-width: 470px) {
+	.courses__buttons {		
+		justify-content: space-around;
+		margin-bottom: 40px;	
+  } 
 }
 /*----------------------MAIN-Block-----------------------*/
 
@@ -716,6 +733,15 @@ body {
 	}
 }
 
+@media(max-width: 479px) {
+	._category {
+		padding: 60px 0 10px 0;
+  }
+  .category__title {
+	margin: 0 0 50px 0;
+}
+}
+
 /*----------------------COURSES---------------------------*/
 
 
@@ -751,7 +777,6 @@ body {
 	right: 100px;
 	background-image: url("../img/courses/02.svg");
 	background-repeat: no-repeat;	
-	
 }
 
 .courses__button {
@@ -768,8 +793,6 @@ body {
 	padding: 15px 35px;
 	border: 2px solid rgba(255, 255, 255, 0.3);
 	border-radius: 15px;
-	
-	
 }
 
 .courses__button:not(:last-child) {
@@ -858,6 +881,7 @@ body {
 .item-courses__cover2 {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 .item-courses__btn {
 	display: flex;
@@ -888,11 +912,11 @@ body {
 	font-size: 16px;
 	line-height: 112%;
 	color: #D9ECFF;
+	padding-left: 10px;
 }
 
 .item-courses__btn-wide {
 	position: relative;
-	/* display: inline-flex; */
 	min-height: 76px;
 	padding: 24px 120px;
 	transition: 0.5s;
@@ -974,9 +998,7 @@ body {
 	.item-courses__btn-big::after {		
 		left: -220px;	
 	}
-} 
-
-
+}
 
 @media (max-width: 800px) {
 	.courses__item {
@@ -992,8 +1014,7 @@ body {
 
 	.item-courses__btn-big {		
 		margin-top: 37px;
-	}
-	
+	}	
 }
 
 @media (max-width: 776px) {
@@ -1010,8 +1031,25 @@ body {
 
 @media (max-width: 550px) {
 	.item-courses__title {
-		font-size: 29px;
+		font-size: 24px;
 	}
+	.item-courses__image {
+		margin: 0 0 34px 0;
+	}
+}
+@media (max-width: 479px) {
+	.courses {
+		padding: 20px 0 34px 0;
+  }
+  .courses__button:not(:last-child) {
+	margin: 0 0 20px 0;
+}
+	.item-courses__btn-big {
+		margin-top: 0;
+  }
+.item-courses__content {
+	padding: 36px 36px 0;
+}
 }
 /*-----------------INSTRUCTORS------------------*/
 
@@ -1311,6 +1349,9 @@ body {
 }
 .content-people__text {
 	font-size: 20px;
+}
+.people {
+	padding: 35px 0 79px;
 }
 }
 
